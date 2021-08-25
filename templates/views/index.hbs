@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+   {{>headerLinks}}
+  </head>
+  <body>
+
+    {{>navbar}}
+
+    <!-- Main Header -->
+
+    <div class="container-fluid main_header">
+      <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+          <div class="row">
+            <!-- main Header Left -->
+            <div class="col-md-6 col-12 main_header_left">
+              <p>Welcome to weather app</p>
+              <h1>Get The Latest <span>Weather</span> Info of Your City</h1>
+              <a href="/current"><button>check now</button></a>
+            </div>
+            <!-- Main Header Right -->
+            <div class="col-md-6 col-12 main_header_right">
+              <div class="image__div">
+              <img class="weather__front" src="images/sunny1.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+{{>footer}}
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

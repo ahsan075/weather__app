@@ -1,0 +1,708 @@
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Piazzolla", serif;
+}
+
+:root {
+    --main-bg: #1e272e;
+    --main-color: #0097e6;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.now {
+    background-color: #0b1f44;
+}
+
+.row {
+    margin: 0;
+}
+
+.main_menu {
+    background-color: var(--main-bg);
+}
+
+.navbar {
+    color: #fff;
+    background-color: var(--main-bg);
+    padding: 2rem 0;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 1.8rem;
+}
+.navbar-brand {
+    font-size: 2.5rem !important;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.active.nav-link {
+    color: var(--main-color);
+}
+
+.fa-snowflake {
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color: var(--main-color);
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.image__div {
+    height: 200px;
+    max-width: 400px;
+}
+
+.weather__front {
+    width: 100%;
+    filter: drop-shadow(0 0.5rem 1rem rgb(162, 5, 5));
+    animation: anime 10s linear infinite, anime2 5s linear infinite;
+}
+
+@keyframes anime {
+    0% {
+        filter: drop-shadow(0 0.5rem 1rem #fe820e69);
+    }
+    50% {
+        filter: drop-shadow(1rem 1rem 3rem #fe810e);
+    }
+
+    100% {
+        filter: drop-shadow(0 0.5rem 1rem #fe820e69);
+    }
+}
+
+@keyframes anime2 {
+    0% {
+        transform: scale(0.7);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.7);
+    }
+}
+/* main Header */
+
+.main_header {
+    margin-top: auto;
+}
+
+.main_row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main_header_left {
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_header_left p {
+    font-size: 2rem;
+}
+
+.main_header_left h1 {
+    font-size: 4rem;
+    margin: 1rem 0 4rem 0;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.main_header_left h1 span {
+    color: var(--main-color);
+}
+
+.main_header_left button {
+    border: none;
+    outline: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+}
+
+.main_header_left button:hover {
+    box-shadow: 0 8px 6px -6px var(--main-color);
+}
+
+.main_header_right {
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_header_right figure {
+    width: 300px;
+}
+
+.main_header_right figure img {
+    filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.3));
+    width: auto;
+    height: auto;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-top: auto;
+}
+footer p {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 5rem;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+
+/* Error Images */
+
+.errImg {
+    width: 60rem;
+    height: 40rem;
+}
+
+/* Weather Page */
+
+.weather {
+    /* background: linear-gradient(to bottom right, #017ad8, #cde3eb) no-repeat;
+  background-position: center; */
+    background-color: #60b9fc;
+}
+
+.tempInformation {
+    width: 35rem;
+    margin: auto;
+    min-height: 20rem;
+    /* background-color: #323544; */
+    /* background-color: #323544c3; */
+    background-color: #ffffff;
+    box-shadow: 0 1px 10px 1px #32354485;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 100px;
+}
+
+.tempHead {
+    text-align: center;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #727272;
+    padding-bottom: 1rem;
+}
+
+.top_layer {
+    width: 100%;
+    height: 35px;
+    box-shadow: 0 1px 5px 1px #323544c3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+}
+
+.top_layer p {
+    /* color: #fff; */
+    color: #000;
+    font-weight: 300;
+    /* padding: 1rem; */
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.main_layer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.main_layer #city_name {
+    /* padding: 2rem 0; */
+    /* color: #bfc1c8; */
+    color: #000;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.main_layer #time {
+    /* color: #bfc1c8; */
+    color: #000;
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 0.5rem;
+}
+
+.main_layer .middle_layer {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    /* color: #000; */
+    position: relative;
+}
+
+.middle_layer p,
+.middle_layer .fas {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.fas {
+    color: #009ad8;
+}
+
+.middle_layer {
+    background-color: rgb(97, 97, 97);
+}
+
+.middle_layer > sup {
+    font-size: 3rem;
+    margin-top: -2rem;
+}
+
+#sunset {
+    /* color: #fff; */
+    color: #000;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.data_hide {
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+
+/* Form */
+
+.main_content {
+    margin-top: 60px;
+}
+
+.temp_form {
+    width: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 3rem auto;
+}
+
+.temp_form input[type="text"] {
+    width: 70%;
+    padding: 1rem;
+    /* background-color: #1e202b; */
+    color: rgb(1, 1, 1);
+    outline: none;
+    /* border: 3px solid #1e202b97; */
+    border: 1px solid rgb(213, 210, 210);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    border-radius: 1rem;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.temp_form input[type="text"]:focus {
+}
+
+::placeholder {
+    color: #3d3d3d;
+    font-weight: 200;
+}
+#countryName {
+    margin-top: 2rem;
+}
+
+.temp_form input[type="submit"] {
+    justify-content: center;
+    align-items: center;
+    border: none;
+    /* background-color: #009ad8; */
+    background-color: #1e202b;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+    color: white;
+    font-size: 1.2rem;
+    /* border-radius: 3rem; */
+    letter-spacing: 2px;
+
+    transition: 0.25s linear;
+}
+
+.temp_form input[type="submit"]:hover {
+    /* color: #009ad8; */
+    color: #1e202b;
+    background-color: #fff;
+    /* background-color: #1e202b33; */
+}
+
+/* weather */
+.current-conditions {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.current-conditions .temp {
+    font-size: 30px;
+    justify-self: start;
+}
+
+.current-conditions img {
+    justify-self: end;
+}
+
+.current-conditions .conditions {
+    color: #727272;
+}
+
+.current-conditions h2 {
+    grid-column: 1 / span 2;
+    justify-self: center;
+}
+
+.current-conditions .current {
+    align-self: center;
+}
+
+.day {
+    text-align: center;
+    min-width: 120px;
+    width: 20%;
+    padding: 10px 0;
+    border: 1px solid lightgrey;
+}
+
+.day:first-of-type {
+    border-left: 1px solid lightgrey;
+}
+
+.forecast {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.date {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.description {
+    margin-bottom: 10px;
+    margin-top: -10px;
+    color: #727272;
+}
+
+.temp span {
+    margin: 0 5px;
+}
+
+.low {
+    color: #1565c0;
+}
+
+.high {
+    color: #d33606;
+}
+.forecastHeading {
+    text-align: center;
+}
+.dayHeading {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#fivedayforecast {
+    margin: 0 10rem;
+    padding: 0 10rem;
+}
+
+.day {
+    background-color: #ffffff;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+
+@media (min-width: 1100px) {
+    .main_header_right figure {
+        width: 400px;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        position: static;
+    }
+    .navbar-brand {
+        margin: auto;
+    }
+    .navbar-collapse {
+        position: absolute;
+        width: 150px;
+        height: 300px;
+        background-color: #1e272ebf;
+        top: 8.2rem;
+        right: 0;
+        border-bottom-left-radius: 200px;
+        transition: 0.3s ease-in-out;
+        z-index: 1;
+    }
+
+    .navbar-collapse ul {
+        position: absolute;
+        top: 15%;
+        left: 25%;
+        transition: 0.3s ease-in-out;
+    }
+    .navbar-collapse li {
+        margin: auto;
+    }
+    .temp_form {
+        width: 60%;
+    }
+
+    #temp_status {
+        display: flex;
+        flex-direction: column;
+    }
+    .w-100 {
+        height: 250px;
+        width: auto;
+    }
+
+    .toggle {
+        background-color: rgb(147, 11, 11);
+        width: 20px !important;
+        height: 20px;
+        outline: none;
+        border: none;
+        border-radius: 50%;
+        color: transparent;
+        box-shadow: none;
+    }
+
+    .change {
+        background-color: rgb(255, 0, 0) !important;
+    }
+
+    .hide {
+        height: 0 !important;
+        width: 0 !important;
+    }
+
+    .hide ul {
+        display: none;
+    }
+
+    #fivedayforecast {
+        margin: 0 2rem;
+        padding: 0 2rem;
+    }
+
+    footer p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main_header_left {
+        height: auto;
+        margin: 5rem 0;
+    }
+
+    .main_header_left h1 {
+        font-size: 3rem;
+    }
+
+    .main_header_right {
+        height: auto;
+        margin-top: 3rem;
+    }
+
+    .main_header_right figure {
+        width: 250px;
+    }
+
+    .temp_form {
+        width: auto;
+    }
+
+    .top_layer p {
+        font-size: 1.5rem;
+    }
+
+    .main_layer {
+        width: auto;
+        height: auto;
+    }
+
+    .w-100 {
+        width: 400px !important;
+    }
+
+    footer p {
+        font-size: 1.3rem;
+    }
+
+    .image__div {
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main_header_right figure {
+        width: 220px;
+    }
+    .main_header_left {
+        height: auto;
+        margin: 2rem 0 1rem 0;
+    }
+
+    .main_header_left p {
+        font-size: 1.6rem;
+    }
+
+    .main_header_left a {
+        margin-bottom: 2rem;
+    }
+    .main_header_left h1 {
+        font-size: 2.5rem;
+    }
+
+    footer p {
+        font-size: 1.1rem;
+    }
+
+    /* Form */
+
+    .temp_form input[type="text"] {
+        font-size: 1.2rem;
+    }
+
+    #countryName {
+        margin-top: 1.5rem;
+    }
+
+    .temp_form input[type="submit"] {
+        font-size: 1.4rem;
+    }
+
+    /* Weather Page */
+
+    .top_layer p {
+        font-size: 1.5rem;
+    }
+
+    .main_layer #city_name {
+        font-size: 1.5rem;
+    }
+
+    .main_layer #time {
+        font-size: 2.5rem;
+    }
+
+    .middle_layer p {
+        font-size: 4rem;
+        font-weight: 900;
+    }
+
+    .middle_layer > sup {
+        font-size: 2rem;
+        margin-top: -1.5rem;
+    }
+
+    #sunset {
+        margin-top: 10px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 410px) {
+    .w-100 {
+        width: 300px !important;
+    }
+    .tempInformation {
+        width: auto;
+        height: auto;
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 310px) {
+    .w-100 {
+        width: 250px !important;
+    }
+
+    .top_layer p {
+        font-size: 1rem;
+    }
+
+    .main_layer #city_name {
+        font-size: 1rem;
+    }
+
+    .main_layer #time {
+        font-size: 1.5rem;
+    }
+    .middle_layer p,
+    .middle_layer .fas {
+        font-size: 2rem;
+    }
+}
