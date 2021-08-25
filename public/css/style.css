@@ -461,10 +461,12 @@ footer p {
 }
 .forecastHeading {
     text-align: center;
+    color: #ffffff;
 }
 .dayHeading {
     margin-top: 20px;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 #fivedayforecast {
@@ -477,6 +479,7 @@ footer p {
     margin-right: 10px;
     margin-bottom: 10px;
 }
+
 
 /* Responsive */
 
