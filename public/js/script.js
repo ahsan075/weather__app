@@ -11,7 +11,8 @@ const searchlocation = document.getElementById("searchlocation");
 
 const submitBtn = document.getElementById("submitBtn");
 
-submitBtn.addEventListener("click", function (e) {
+
+const weatherApi= (e)=>{
     e.preventDefault();
     const s__value = searchlocation.value;
     console.log(s__value);
@@ -24,22 +25,15 @@ submitBtn.addEventListener("click", function (e) {
     const forecast = `https://api.openweathermap.org/data/2.5/forecast?q=${s__value}&appid=${api}`;
 
     getForcast(forecast);
+}
+
+submitBtn.addEventListener("click", function (e) {
+  weatherApi(e)
 });
 
 window.addEventListener("keypress", function (e) {
     if (e.keyCode === 13) {
-        e.preventDefault();
-        const s__value = searchlocation.value;
-        console.log(s__value);
-
-        const current = `https://api.openweathermap.org/data/2.5/weather?q=${s__value}&appid=${api}`;
-        console.log(current);
-
-        getcurrent(current);
-
-        const forecast = `https://api.openweathermap.org/data/2.5/forecast?q=${s__value}&appid=${api}`;
-
-        getForcast(forecast);
+       weatherApi(e)
     }
 });
 
@@ -70,6 +64,15 @@ window.addEventListener("load", (e) => {
 
             getForcast(forecast);
         });
+    }else{
+        const current = `https://api.openweathermap.org/data/2.5/weather?q=dhaka&appid=${api}`;
+        console.log(current);
+
+        getcurrent(current);
+
+        const forecast = `https://api.openweathermap.org/data/2.5/forecast?q=dhaka&appid=${api}`;
+
+        getForcast(forecast);
     }
 });
 
